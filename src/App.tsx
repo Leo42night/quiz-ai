@@ -105,8 +105,8 @@ export default function AIQuizGame() {
 
       Berikan penilaian yang objektif dan adil.`;
 
-      // >>>> panggil backend lokal kita <<<<
-      const response = await fetch("http://localhost:3000/api/evaluate", {
+      // >>>> panggil backend lokal kita (relative path) <<<<
+      const response = await fetch("/api/evaluate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
