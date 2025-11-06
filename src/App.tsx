@@ -11,33 +11,63 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    question: "Jelaskan apa itu fotosintesis?",
-    context: "Fotosintesis adalah proses di mana tumbuhan mengubah energi cahaya matahari menjadi energi kimia dalam bentuk glukosa, dengan menggunakan karbon dioksida dan air, serta menghasilkan oksigen sebagai produk sampingan.",
-    idealAnswer: "Fotosintesis adalah proses tumbuhan mengubah cahaya matahari, CO2, dan air menjadi glukosa dan oksigen."
+    question: "Apa yang dimaksud dengan Pemrograman Berorientasi Objek (OOP) dalam PHP?",
+    context: "OOP (Object Oriented Programming) adalah paradigma pemrograman yang berfokus pada penggunaan objek, di mana setiap objek memiliki data (property) dan fungsi (method). Dalam PHP, OOP membantu dalam membuat kode yang modular, reusable, dan mudah dikelola.",
+    idealAnswer: "OOP adalah paradigma pemrograman yang menggunakan objek berisi property dan method untuk membangun program secara modular dan reusable di PHP."
   },
   {
     id: 2,
-    question: "Apa yang dimaksud dengan algoritma?",
-    context: "Algoritma adalah urutan langkah-langkah logis dan sistematis untuk menyelesaikan suatu masalah atau melakukan tugas tertentu. Algoritma harus jelas, terbatas, dan efektif.",
-    idealAnswer: "Algoritma adalah urutan langkah sistematis untuk menyelesaikan masalah secara logis dan efektif."
+    question: "Jelaskan perbedaan antara class dan object dalam PHP?",
+    context: "Class adalah blueprint atau template untuk membuat objek, sedangkan object adalah instance konkret yang dibuat berdasarkan class tersebut. Misalnya, class `Mobil` bisa memiliki objek `mobilSaya` dan `mobilTeman`.",
+    idealAnswer: "Class adalah cetak biru atau template, sedangkan object adalah instance nyata yang dibuat dari class tersebut."
   },
   {
     id: 3,
-    question: "Mengapa air penting untuk kehidupan?",
-    context: "Air adalah komponen esensial untuk semua makhluk hidup karena berperan sebagai pelarut universal, mengatur suhu tubuh, medium transportasi nutrisi, dan membantu reaksi kimia dalam sel.",
-    idealAnswer: "Air penting karena sebagai pelarut, pengatur suhu, transportasi nutrisi, dan medium reaksi kimia dalam tubuh."
+    question: "Apa itu inheritance (pewarisan) dalam PHP OOP?",
+    context: "Inheritance memungkinkan sebuah class untuk mewarisi properti dan metode dari class lain. Ini memudahkan penggunaan kembali kode dan memperluas fungsionalitas tanpa menulis ulang logika yang sama.",
+    idealAnswer: "Inheritance adalah mekanisme di mana class dapat mewarisi properti dan metode dari class lain untuk memudahkan reuse dan pengembangan kode."
   },
   {
     id: 4,
-    question: "Apa fungsi dari CPU dalam komputer?",
-    context: "CPU (Central Processing Unit) adalah otak komputer yang berfungsi memproses instruksi, melakukan perhitungan matematika dan logika, serta mengkoordinasikan operasi semua komponen komputer.",
-    idealAnswer: "CPU adalah otak komputer yang memproses instruksi, melakukan perhitungan, dan mengkoordinasikan semua komponen."
+    question: "Jelaskan konsep encapsulation dalam PHP!",
+    context: "Encapsulation adalah pembungkusan data dan metode dalam satu kesatuan (class), serta membatasi akses ke properti atau metode menggunakan modifier seperti public, private, dan protected.",
+    idealAnswer: "Encapsulation membungkus data dan metode dalam class serta membatasi aksesnya menggunakan public, private, atau protected."
   },
   {
     id: 5,
-    question: "Jelaskan hukum gravitasi Newton?",
-    context: "Hukum gravitasi Newton menyatakan bahwa setiap benda di alam semesta menarik benda lain dengan gaya yang berbanding lurus dengan massa kedua benda dan berbanding terbalik dengan kuadrat jarak antara mereka.",
-    idealAnswer: "Hukum gravitasi Newton: gaya tarik antara dua benda berbanding lurus dengan massa dan berbanding terbalik dengan kuadrat jarak."
+    question: "Apa itu polymorphism dalam PHP OOP?",
+    context: "Polymorphism memungkinkan objek dari berbagai class untuk diakses melalui interface atau class induk yang sama, dengan setiap class memiliki implementasi yang berbeda terhadap method yang sama.",
+    idealAnswer: "Polymorphism adalah kemampuan objek berbeda untuk menggunakan method yang sama dengan cara atau hasil yang berbeda."
+  },
+  {
+    id: 6,
+    question: "Apa yang dimaksud dengan REST API dalam konteks PHP?",
+    context: "REST API (Representational State Transfer) adalah arsitektur yang memungkinkan komunikasi antara client dan server melalui protokol HTTP. Dalam PHP, REST API biasanya dibangun untuk menyediakan data dalam format JSON dengan method seperti GET, POST, PUT, dan DELETE.",
+    idealAnswer: "REST API adalah layanan berbasis HTTP yang memungkinkan client berkomunikasi dengan server untuk mengakses atau mengubah data menggunakan method seperti GET, POST, PUT, dan DELETE."
+  },
+  {
+    id: 7,
+    question: "Bagaimana cara membuat endpoint GET sederhana pada REST API di PHP?",
+    context: "Endpoint GET digunakan untuk mengambil data dari server. Di PHP, biasanya menggunakan `$_SERVER['REQUEST_METHOD'] == 'GET'` untuk memeriksa permintaan, kemudian mengirimkan data dalam format JSON menggunakan `echo json_encode($data);`.",
+    idealAnswer: "Gunakan metode GET di PHP dengan memeriksa `$_SERVER['REQUEST_METHOD'] == 'GET'` dan kembalikan data dalam format JSON."
+  },
+  {
+    id: 8,
+    question: "Apa perbedaan antara REST API dan SOAP API dalam PHP?",
+    context: "REST API menggunakan HTTP dengan format ringan seperti JSON atau XML dan lebih mudah diimplementasikan. SOAP menggunakan protokol XML dengan struktur yang ketat dan lebih kompleks. REST cenderung lebih cepat dan fleksibel untuk web modern.",
+    idealAnswer: "REST API menggunakan HTTP dan JSON yang ringan, sedangkan SOAP API menggunakan XML yang lebih kompleks dan formal."
+  },
+  {
+    id: 9,
+    question: "Bagaimana cara mengimplementasikan autentikasi token pada REST API PHP?",
+    context: "Autentikasi token digunakan untuk mengamankan API agar hanya pengguna sah yang bisa mengaksesnya. Salah satu cara umum adalah menggunakan JWT (JSON Web Token), di mana server mengeluarkan token saat login dan client mengirimkannya di header Authorization untuk setiap permintaan.",
+    idealAnswer: "Gunakan JWT sebagai token autentikasi: server memberi token saat login, lalu client mengirim token di header Authorization pada setiap request."
+  },
+  {
+    id: 10,
+    question: "Jelaskan bagaimana konsep CRUD diterapkan dalam REST API PHP!",
+    context: "CRUD (Create, Read, Update, Delete) adalah operasi dasar pada data. Dalam REST API PHP, tiap operasi diwakili oleh method HTTP: POST untuk Create, GET untuk Read, PUT untuk Update, dan DELETE untuk Delete. Setiap endpoint menangani satu jenis operasi terhadap resource.",
+    idealAnswer: "CRUD di REST API PHP menggunakan method HTTP: POST (Create), GET (Read), PUT (Update), dan DELETE (Delete) untuk mengelola resource."
   }
 ];
 
